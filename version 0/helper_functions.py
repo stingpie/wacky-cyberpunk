@@ -101,6 +101,9 @@ def print_dialog(game_state, room_dialog):
                 break
                 
         if(dialog==None):
+            for flag in game_state["p_flags"]:
+                if(flag.startswith("[TEMP]")):
+                    game_state["p_flags"].remove(flag)
             return game_state
             
             
@@ -112,6 +115,9 @@ def print_dialog(game_state, room_dialog):
         print(dialog["Dialog"])
         
         if(len(responses)==0):
+            for flag in game_state["p_flags"]:
+                if(flag.startswith("[TEMP]")):
+                    game_state["p_flags"].remove(flag)
             return game_state
         
         for i in range(len(responses)):
@@ -121,6 +127,10 @@ def print_dialog(game_state, room_dialog):
 
         
         game_state["p_flags"] += responses[player_choice][1]
+        
+    for flag in game_state["p_flags"]:
+        if(flag.startswith("[TEMP]")):
+            game_state["p_flags"].remove(flag)
     return game_state
 
     

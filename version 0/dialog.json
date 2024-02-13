@@ -7,21 +7,21 @@
 				"Dialog":"Huh? What do you want? Can't you see I'm in the middle of something here? Go talk to Ravenette in the garage. I can't be bothered to answer your inane questions.",
 				"Response options":
 				[
-					["Are you Nullbird?",["ASKED INANE QUESTION TO NULLBIRD"]],
-					["What is the infininet?",["ASKED ABOUT INFININET TO NULLBIRD"]],
-					["Who's Ravenette?",["ASKED ABOUT RAVENETTE TO NULLBIRD"]]
+					["Are you Nullbird?",["[TEMP] ASKED INANE QUESTION TO NULLBIRD"]],
+					["What is the infininet?",["[TEMP] ASKED ABOUT INFININET TO NULLBIRD"]],
+					["Who's Ravenette?",["[TEMP] ASKED ABOUT RAVENETTE TO NULLBIRD"]]
 				]
 			},
 			{
-				"Requirements":["ASKED INANE QUESTION TO NULLBIRD"], 
+				"Requirements":["[TEMP] ASKED INANE QUESTION TO NULLBIRD"], 
 				"Dialog":"What did I just say about inane questions?",
 				"Response options":[]
 			},{
-				"Requirements":["ASKED ABOUT INFININET TO NULLBIRD"], 
+				"Requirements":["[TEMP] ASKED ABOUT INFININET TO NULLBIRD"], 
 				"Dialog":"The infininet is like the internet, but with even more stupidity.",
 				"Response options":[]
 			},{
-				"Requirements":["ASKED ABOUT RAVENETTE TO NULLBIRD"], 
+				"Requirements":["[TEMP] ASKED ABOUT RAVENETTE TO NULLBIRD"], 
 				"Dialog":"Ravenette is an AI I designed. Based on the name you probably already guessed this, but it's based on a crow.",
 				"Response options":[]
 			}
@@ -35,18 +35,18 @@
 				"Dialog":"Hello, I --CAWW!!-- am Ravenette. Is there any--CAWW!!--thing I can do for you?",
 				"Response options":
 				[
-					["Are you based on a crow?",["ASKED ABOUT RAVENETTE TO RAVENETTE"]],
-					["Are you based on a raven?",["ASKED ABOUT RAVENETTE TO RAVENETTE"]],
-					["Where's the bathroom?",["ASKED ABOUT BATHROOM TO RAVENETTE"]]
+					["Are you based on a crow?",["[TEMP] ASKED ABOUT RAVENETTE TO RAVENETTE"]],
+					["Are you based on a raven?",["[TEMP] ASKED ABOUT RAVENETTE TO RAVENETTE"]],
+					["Where's the bathroom?",["[TEMP] ASKED ABOUT BATHROOM TO RAVENETTE"]]
 				]
 			},
 			{
-				"Requirements":["ASKED ABOUT RAVENETTE TO RAVENETTE"],
+				"Requirements":["[TEMP] ASKED ABOUT RAVENETTE TO RAVENETTE"],
 				"Dialog":"No, I'm based --CAWW!!-- on an ostrich.",
 				"Response options":[]
 			},
 			{
-				"Requirements":["ASKED ABOUT BATHROOM TO RAVENETTE"],
+				"Requirements":["[TEMP] ASKED ABOUT BATHROOM TO RAVENETTE"],
 				"Dialog":"Why would I know that? --CAW!!-- I'm an AI limited to a tablet. How --CAW!!-- do you expect me to find one?",
 				"Response options":[]
 			}
