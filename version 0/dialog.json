@@ -4,7 +4,6 @@
 		"patio":[
 			{
 				"Requirements":["None"], 
-				"Responded":0,
 				"Dialog":"Huh? What do you want? Can't you see I'm in the middle of something here? Go talk to Ravenette in the garage. I can't be bothered to answer your inane questions.",
 				"Response options":
 				[
@@ -15,17 +14,14 @@
 			},
 			{
 				"Requirements":["ASKED INANE QUESTION TO NULLBIRD"], 
-				"Responded":0,
 				"Dialog":"What did I just say about inane questions?",
 				"Response options":[]
 			},{
 				"Requirements":["ASKED ABOUT INFININET TO NULLBIRD"], 
-				"Responded":0,
 				"Dialog":"The infininet is like the internet, but with even more stupidity.",
 				"Response options":[]
 			},{
 				"Requirements":["ASKED ABOUT RAVENETTE TO NULLBIRD"], 
-				"Responded":0,
 				"Dialog":"Ravenette is an AI I designed. Based on the name you probably already guessed this, but it's based on a crow.",
 				"Response options":[]
 			}
@@ -36,7 +32,6 @@
 		"garage":[
 			{
 				"Requirements":["None"],
-				"Responded":0,
 				"Dialog":"Hello, I --CAWW!!-- am Ravenette. Is there any--CAWW!!--thing I can do for you?",
 				"Response options":
 				[
@@ -47,13 +42,11 @@
 			},
 			{
 				"Requirements":["ASKED ABOUT RAVENETTE TO RAVENETTE"],
-				"Responded":0,
 				"Dialog":"No, I'm based --CAWW!!-- on an ostrich.",
 				"Response options":[]
 			},
 			{
 				"Requirements":["ASKED ABOUT BATHROOM TO RAVENETTE"],
-				"Responded":0,
 				"Dialog":"Why would I know that? --CAW!!-- I'm an AI limited to a tablet. How --CAW!!-- do you expect me to find one?",
 				"Response options":[]
 			}

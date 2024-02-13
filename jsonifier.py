@@ -58,7 +58,10 @@ finish_reason="length"
 
 while True:
     
-    
+    ## NOTE: GPT-3.5 just gives up in the middle of completions for some reason. 
+    ## It doesn't even run out of tokens or anything- it just gives up! because
+    ## of that, running gpt-3.5 will crash this program, despite openAI swearing
+    ## that it will always produce valid json, as long as token count permits.
     response = client.chat.completions.create(
         #model="gpt-3.5-turbo-0125",  
         model="gpt-4-turbo-preview", ## Unfortunately, this prompt is too complicated for gpt 3.5

@@ -5,11 +5,12 @@ import helper_functions as hf
 ## a list of all the actions a player can take.
 actions ={
             "look" : hf.examine,
-            "pick up" : hf.take_item,
+            "take" : hf.take_item,
             "go" : hf.move_player,
             "use" : hf.use_item,
             "talk" : hf.talk_to,
-            "speak" :hf.talk_to
+            "speak" :hf.talk_to,
+            "quit"  :exit
             }
 
 

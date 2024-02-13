@@ -4,8 +4,10 @@
 def examine(game_state, command): ## Examine a room, character, or an item. 
     name_to_examine = " ".join(command.split()[1:]) ## get the name of the thing the player wants to examine
     
-    
-    
+    if(name_to_examine==""): ## if the player has just typed 'look'
+        describe_room(game_state, game_state["p_loc"]) ## tell the player about the room they are in
+        return game_state
+        
     if (name_to_examine in game_state["rooms"]): ## if the player wants to examine a room
         if(name_to_examine == game_state["p_loc"]): ## if the player is examining the room they are currently in.
             describe_room(game_state, name_to_examine)  ## describe the room.
@@ -87,21 +89,22 @@ def meets_requirements(player_flags, required_flags):
 def print_dialog(game_state, room_dialog):
 
     responses = ["a"]
-    
+    conversation_history=[]
     while len(responses)!=0:
         dialog=None
         
         ## check to see if the player has any flags which allow different dialog options
         for i in range(len(room_dialog)): ## for each dialog tree the character has in this room
             dialog_tree = room_dialog[i]
-            if( meets_requirements(game_state["p_flags"], dialog_tree["Requirements"]) and dialog_tree["Responded"]==0): ## if the player meets all of the requirements for this dialog tree         
+            if( not (dialog_tree in conversation_history) and meets_requirements(game_state["p_flags"], dialog_tree["Requirements"])): ## if the player meets all of the requirements for this dialog tree
                 dialog = dialog_tree
-                room_dialog[i]["Responded"]+=1
                 break
                 
         if(dialog==None):
             return game_state
-                
+            
+            
+        conversation_history += [dialog_tree]
         responses = dialog["Response options"]
     
         
