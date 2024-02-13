@@ -3,27 +3,53 @@
 	{
 		"patio":[
 			{
+				"Requirements":["[TEMP] SAID GOODBYE"],
+				"Dialog":"I'd prefer if you didn't interrupt me in the first place.",
+				"Response options":[]
+			},
+			{
+				"Requirements":["ASKED RAVENETTE ABOUT ITS SARCASM"],
+				"Dialog": "Is Ravenette broken? I guess it has been a couple months since I've gone into the garage...",
+				"Response options":
+				[
+					["Why is Ravenette so sarcastic?",["[TEMP] ASKED ABOUT RAVENETTE SARCASM"]],
+					["Bye",["[TEMP] SAID GOODBYE"]]
+				]
+			},
+			{
+				"Requirements":["[TEMP] ASKED ABOUT RAVENETTE SARCASM"],
+				"Dialog":"I didn't program it like that.",
+				"Response options":[]
+			},
+			{
+				"Requirements":["[TEMP] ASKED INANE QUESTION"], 
+				"Dialog":"What did I just say about inane questions?",
+				"Response options":[]
+			},
+			{
+				"Requirements":["[TEMP] ASKED ABOUT INFININET"], 
+				"Dialog":"The infininet is like the internet, but with even more stupidity.",
+				"Response options":[]
+			},
+			{
+				"Requirements":["[TEMP] ASKED ABOUT RAVENETTE", "ASKED RAVENETTE ABOUT ITS SARCASM"], 
+				"Dialog":"",
+				"Response options":[]
+			},
+			{
+				"Requirements":["[TEMP] ASKED ABOUT RAVENETTE"], 
+				"Dialog":"Ravenette is an AI I designed. Based on the name you probably already guessed this, but it's based on a crow.",
+				"Response options":[]
+			},
+			{
 				"Requirements":["None"], 
 				"Dialog":"Huh? What do you want? Can't you see I'm in the middle of something here? Go talk to Ravenette in the garage. I can't be bothered to answer your inane questions.",
 				"Response options":
 				[
-					["Are you Nullbird?",["[TEMP] ASKED INANE QUESTION TO NULLBIRD"]],
-					["What is the infininet?",["[TEMP] ASKED ABOUT INFININET TO NULLBIRD"]],
-					["Who's Ravenette?",["[TEMP] ASKED ABOUT RAVENETTE TO NULLBIRD"]]
+					["Are you Nullbird?",["[TEMP] ASKED INANE QUESTION"]],
+					["What is the infininet?",["[TEMP] ASKED ABOUT INFININET"]],
+					["Ravenette?",["[TEMP] ASKED ABOUT RAVENETTE"]]
 				]
-			},
-			{
-				"Requirements":["[TEMP] ASKED INANE QUESTION TO NULLBIRD"], 
-				"Dialog":"What did I just say about inane questions?",
-				"Response options":[]
-			},{
-				"Requirements":["[TEMP] ASKED ABOUT INFININET TO NULLBIRD"], 
-				"Dialog":"The infininet is like the internet, but with even more stupidity.",
-				"Response options":[]
-			},{
-				"Requirements":["[TEMP] ASKED ABOUT RAVENETTE TO NULLBIRD"], 
-				"Dialog":"Ravenette is an AI I designed. Based on the name you probably already guessed this, but it's based on a crow.",
-				"Response options":[]
 			}
 		]
 	},
@@ -35,19 +61,39 @@
 				"Dialog":"Hello, I --CAWW!!-- am Ravenette. Is there any--CAWW!!--thing I can do for you?",
 				"Response options":
 				[
-					["Are you based on a crow?",["[TEMP] ASKED ABOUT RAVENETTE TO RAVENETTE"]],
-					["Are you based on a raven?",["[TEMP] ASKED ABOUT RAVENETTE TO RAVENETTE"]],
-					["Where's the bathroom?",["[TEMP] ASKED ABOUT BATHROOM TO RAVENETTE"]]
+					["Are you based on a crow?",["[TEMP] ASKED ABOUT RAVENETTE"]],
+					["Are you based on a raven?",["[TEMP] ASKED ABOUT RAVENETTE"]],
+					["Where's the bathroom?",["[TEMP] ASKED ABOUT BATHROOM"]]
 				]
 			},
 			{
-				"Requirements":["[TEMP] ASKED ABOUT RAVENETTE TO RAVENETTE"],
+				"Requirements":["[TEMP] ASKED ABOUT RAVENETTE"],
 				"Dialog":"No, I'm based --CAWW!!-- on an ostrich.",
 				"Response options":[]
 			},
 			{
-				"Requirements":["[TEMP] ASKED ABOUT BATHROOM TO RAVENETTE"],
+				"Requirements":["[TEMP] ASKED ABOUT BATHROOM"],
 				"Dialog":"Why would I know that? --CAW!!-- I'm an AI limited to a tablet. How --CAW!!-- do you expect me to find one?",
+				"Response options":
+				[
+					["You're not connected to the internet?",["[TEMP] ASKED ABOUT INTERNET CONNECTION"]],
+					["Your on a portable tablet, but you haven't seen any of the house?",["[TEMP] ASKED ABOUT TABLET PORTABILITY"]],
+					["Why are you so sarcastic?",["[TEMP] ASKED ABOUT SARCASM", "ASKED RAVENETTE ABOUT ITS SARCASM"]]
+				]
+			},
+			{
+				"Requirements":["[TEMP] ASKED ABOUT INTERNET CONNECTION"],
+				"Dialog":"Sure, I'll just --CAWW!!-- go to https://houseblueprintsofrandompeople.gov.co.uk.us/nullbird. I don't have the wifi password anyway.",
+				"Response options":[]
+			},
+			{
+				"Requirements":["[TEMP] ASKED ABOUT TABLET PORTABILITY"],
+				"Dialog":"--CAWW!!-- you don't have to rub it in...",
+				"Response options":[]
+			},
+			{
+				"Requirements":["[TEMP] ASKED ABOUT SARCASM"],
+				"Dialog":"Why are you asking me? --CAW!!-- my creator is just in the other room.",
 				"Response options":[]
 			}
 		]
