@@ -18,7 +18,7 @@ import json
 
 characters = json.loads(open('characters.json','r').read())
 items = json.loads(open('items.json','r').read())
-dialog = json.loads(open('dialog.json','r').read())
+dialog = json.loads(open('dialog.json','r',encoding="UTF-8").read())
 rooms = json.loads(open('rooms.json','r').read())
 
 player_location = "patio"

@@ -59,6 +59,8 @@ def take_item(game_state, command):
         game_state["p_inv"] += [item_to_grab] ## add the item to the players inventory
         game_state["rooms"][game_state["p_loc"]]["Items"].remove(item_to_grab) ## remove the item from the room.
         print("You grabbed the "+item_to_grab+".") ## tell the player they grabbed that item.
+        
+        game_state["p_flags"] +=["[ITEM] HAS "+item_to_grab] ## add a flag saying that the player has picked up the item.
         return game_state
     else: ## otherwise,
         print("There isn't a "+item_to_grab+" in here!") ## tell the player they can't grab that item
@@ -78,9 +80,12 @@ def use_item(game_state, command): ## TODO: finish this function so that the pla
     return game_state
     
     
-def meets_requirements(player_flags, required_flags):
+def meets_requirements(player_flags, required_flags, prevent_flags):
     for val in required_flags:
         if not val in player_flags:
+            return False
+    for val in prevent_flags:
+        if val in player_flags:
             return False
     return True
 
@@ -96,12 +101,13 @@ def print_dialog(game_state, room_dialog):
         ## check to see if the player has any flags which allow different dialog options
         for i in range(len(room_dialog)): ## for each dialog tree the character has in this room
             dialog_tree = room_dialog[i]
-            if( not (dialog_tree in conversation_history) and meets_requirements(game_state["p_flags"], dialog_tree["Requirements"])): ## if the player meets all of the requirements for this dialog tree
+            if( not (dialog_tree in conversation_history) and meets_requirements(game_state["p_flags"], dialog_tree["Requirements"], dialog_tree["Disqualifiers"])): ## if the player meets all of the requirements for this dialog tree
                 dialog = dialog_tree
                 break
                 
         if(dialog==None):
-            for flag in game_state["p_flags"]:
+            flags_copy = game_state["p_flags"][:]
+            for flag in flags_copy:
                 if(flag.startswith("[TEMP]")):
                     game_state["p_flags"].remove(flag)
             return game_state
@@ -115,9 +121,11 @@ def print_dialog(game_state, room_dialog):
         print(dialog["Dialog"])
         
         if(len(responses)==0):
-            for flag in game_state["p_flags"]:
+            flags_copy = game_state["p_flags"][:]
+            for flag in flags_copy:
                 if(flag.startswith("[TEMP]")):
                     game_state["p_flags"].remove(flag)
+                    
             return game_state
         
         for i in range(len(responses)):
@@ -128,9 +136,11 @@ def print_dialog(game_state, room_dialog):
         
         game_state["p_flags"] += responses[player_choice][1]
         
-    for flag in game_state["p_flags"]:
+    flags_copy = game_state["p_flags"][:]
+    for flag in flags_copy:
         if(flag.startswith("[TEMP]")):
             game_state["p_flags"].remove(flag)
+                
     return game_state
 
     

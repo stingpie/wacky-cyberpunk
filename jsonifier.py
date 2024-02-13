@@ -27,17 +27,16 @@ feedback=input("What feedback would you give?")
 from os import listdir
 from os.path import isfile, join
 onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
-#print(onlyfiles)
+
 
 
 files={}
 i=0
 for f in onlyfiles:
+    files[f] = open(mypath+"\\"+f,'r').read()
 
-    files[f] = open(mypath+"\\"+f,'r').read()##.replace("\n","\\n").replace("\"","\\\"")
 
 
-#print(files['ravenette-desc.txt'])
 
 
 combined = {"files":files, "feedback":feedback}
@@ -49,12 +48,14 @@ print(json.dumps(combined))
 from openai import OpenAI
 client = OpenAI()
 
-current_response = prompt + "\n" + str(json.dumps(combined))
-full_prompt_len = len(current_response)
+initial_prompt = prompt + "\n" + str(json.dumps(combined))
 
-
-responses=[]
 finish_reason="length"
+
+incomplete_response=""
+
+GPT_messages =[{"role": "system", "content": "You are a helpful assistant designed to output JSON."},{"role": "user", "content":initial_prompt}]
+
 
 while True:
     
@@ -63,31 +64,32 @@ while True:
     ## of that, running gpt-3.5 will crash this program, despite openAI swearing
     ## that it will always produce valid json, as long as token count permits.
     response = client.chat.completions.create(
-        #model="gpt-3.5-turbo-0125",  
-        model="gpt-4-turbo-preview", ## Unfortunately, this prompt is too complicated for gpt 3.5
+        #model="gpt-3.5-turbo-1106",
+        model="gpt-3.5-turbo-0125",  
+        #model="gpt-4-turbo-preview", ## Unfortunately, this prompt is too complicated for gpt 3.5
         response_format={ "type": "json_object" },
-        messages=[
-            {"role": "system", "content": "You are a helpful assistant designed to output JSON."},
-            {"role": "user", "content":current_response}
-        ],
-        max_tokens=4095
+        messages=GPT_messages,
+        max_tokens=None
     )
-    #time.sleep(5)
-    print("?")
+
     finish_reason = response.choices[0].finish_reason
-    print(finish_reason)
-        
-    current_response+=response.choices[0].message.content
-    if(finish_reason == "stop"):
-        break
+    print("finish reason:", finish_reason)
+    incomplete_response += response.choices[0].message.content#.replace("```json","").replace("```","")
 
-
-print(current_response[full_prompt_len:])
-json_response = json.loads(current_response[full_prompt_len:])
-
+    GPT_messages+=[{"role":"assistant","content":response.choices[0].message.content}]#, {"role":"user","content":"continue"}]
     
+    ## GPT3.5 is broken, so I have to manually verifiy whether it's valid JSON
+    if(finish_reason == "stop"):
+        try:
+            print(incomplete_response)
+            json_response = json.loads(incomplete_response)
+            break
+        except ValueError:
+            finish_reason="length"
 
 
+
+json_response = json.loads(incomplete_response)
 
 
 new_mypath= "Version "+str(int(version)+1)
@@ -101,7 +103,6 @@ for f in json_response["files"]:
     newfile = open(new_mypath + "\\"+f, "w")
     newfile.write(str(json_response["files"][f]))
     newfile.close()
-#print(response.choices[0].message.content)
 
 
 

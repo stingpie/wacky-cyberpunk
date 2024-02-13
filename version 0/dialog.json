@@ -4,11 +4,13 @@
 		"patio":[
 			{
 				"Requirements":["[TEMP] SAID GOODBYE"],
+				"Disqualifiers":[],
 				"Dialog":"I'd prefer if you didn't interrupt me in the first place.",
 				"Response options":[]
 			},
 			{
 				"Requirements":["ASKED RAVENETTE ABOUT ITS SARCASM"],
+				"Disqualifiers":[],
 				"Dialog": "Is Ravenette broken? I guess it has been a couple months since I've gone into the garage...",
 				"Response options":
 				[
@@ -18,31 +20,37 @@
 			},
 			{
 				"Requirements":["[TEMP] ASKED ABOUT RAVENETTE SARCASM"],
+				"Disqualifiers":[],
 				"Dialog":"I didn't program it like that.",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[TEMP] ASKED INANE QUESTION"], 
+				"Disqualifiers":[],
 				"Dialog":"What did I just say about inane questions?",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[TEMP] ASKED ABOUT INFININET"], 
+				"Disqualifiers":[],
 				"Dialog":"The infininet is like the internet, but with even more stupidity.",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[TEMP] ASKED ABOUT RAVENETTE", "ASKED RAVENETTE ABOUT ITS SARCASM"], 
+				"Disqualifiers":[],
 				"Dialog":"",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[TEMP] ASKED ABOUT RAVENETTE"], 
+				"Disqualifiers":[],
 				"Dialog":"Ravenette is an AI I designed. Based on the name you probably already guessed this, but it's based on a crow.",
 				"Response options":[]
 			},
 			{
 				"Requirements":["None"], 
+				"Disqualifiers":["ASKED RAVENETTE ABOUT ITS SARCASM"],
 				"Dialog":"Huh? What do you want? Can't you see I'm in the middle of something here? Go talk to Ravenette in the garage. I can't be bothered to answer your inane questions.",
 				"Response options":
 				[
@@ -58,6 +66,7 @@
 		"garage":[
 			{
 				"Requirements":["None"],
+				"Disqualifiers":["[ITEM] HAS Ravenette's tablet"],
 				"Dialog":"Hello, I --CAWW!!-- am Ravenette. Is there any--CAWW!!--thing I can do for you?",
 				"Response options":
 				[
@@ -68,11 +77,13 @@
 			},
 			{
 				"Requirements":["[TEMP] ASKED ABOUT RAVENETTE"],
+				"Disqualifiers":[],
 				"Dialog":"No, I'm based --CAWW!!-- on an ostrich.",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[TEMP] ASKED ABOUT BATHROOM"],
+				"Disqualifiers":[],
 				"Dialog":"Why would I know that? --CAW!!-- I'm an AI limited to a tablet. How --CAW!!-- do you expect me to find one?",
 				"Response options":
 				[
@@ -83,18 +94,65 @@
 			},
 			{
 				"Requirements":["[TEMP] ASKED ABOUT INTERNET CONNECTION"],
+				"Disqualifiers":[],
 				"Dialog":"Sure, I'll just --CAWW!!-- go to https://houseblueprintsofrandompeople.gov.co.uk.us/nullbird. I don't have the wifi password anyway.",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[TEMP] ASKED ABOUT TABLET PORTABILITY"],
-				"Dialog":"--CAWW!!-- you don't have to rub it in...",
+				"Disqualifiers":[],
+				"Dialog":"you don't have to rub it in...",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[TEMP] ASKED ABOUT SARCASM"],
+				"Disqualifiers":[],
 				"Dialog":"Why are you asking me? --CAW!!-- my creator is just in the other room.",
 				"Response options":[]
+			},
+			{
+				"Requirements":["[ITEM] HAS Ravenette's tablet"],
+				"Disqualifiers":["RAVENETTE RELENTS"],
+				"Dialog":"--CAWW!!-- Unhand me you--CAW!! CAWW!!--brute! --CAW!! CAWW!!--",
+				"Response options":[
+					["I'm just showing you the rest of the house!",["[TEMP] SHOWS RAVENETTE HOUSE"]],
+					["Nullbird said he needed you.", ["PLAYER LIED TO RAVENETTE ABOUT NULLBIRD"]],
+					["Finders keepers heheheh...", ["[TEMP] PLAYER IS WEIRD"]]
+				]
+			},
+			{
+				"Requirements":["[ITEM] HAS Ravenette's tablet", "[TEMP] SHOWS RAVENETTE HOUSE"],
+				"Disqualifiers":["RAVENETTE RELENTS"],
+				"Dialog":"Really? I'm kinda beholdent to your will anyway.",
+				"Response options":[
+					["Yes.",["RAVENETTE RELENTS"]],
+					["no lmaui",["RAVENETTE BETRAYED"]]
+				]
+			},
+			{
+				"Requirements":["RAVENETTE BETRAYED"],
+				"Disqualifiers":["APOLOGIZES TO RAVENETTE"],
+				"Dialog":"🮠◕ﺣ◕🮡",
+				"Response options":[
+					["No, I'm sorry.", ["APOLOGIZES TO RAVENETTE"]],
+					["...",[]]
+				]
+			},
+			{
+				"Requirements":["[ITEM] HAS Ravenette's tablet","PLAYER LIED TO RAVENETTE ABOUT NULLBIRD"],
+				"Disqualifiers":["RAVENETTE RELENTS"],
+				"Dialog":"--CAWW!!-- Really?! --CAW!! CAW!!-- I haven't spoken to him --CAWW!! CAWW!!-- since last Febuary! --CAW!! CAWW!! CAWW!!--",
+				"Response options":[
+					["Ye.",["RAVENETTE RELENTS"]]
+				]
+			},
+			{
+				"Requirements":["[ITEM] HAS Ravenette's tablet", "[TEMP] PLAYER IS WEIRD"],
+				"Disqualifiers":["RAVENETTE RELENTS"],
+				"Dialog":"oh god im gonna be murdered",
+				"Response options":[
+					["...",["RAVENETTE RELENTS"]]
+				]
 			}
 		]
 	}
