@@ -11,13 +11,13 @@
 		"Description":"A patio overlooking a city of glittering lights. There's a small workbench setup, covered in a thin layer of circuit boards and faux feathers.",
 		"Items":["faux feathers"],
 		"Adjacent rooms":["kitchen"],
-		"Characters":["Nullbird"]
+		"Characters":["Nullbird", "Ravenette"]
 	},
 	"kitchen":
 	{
 		"Description": "A kitchen consisting entirely of a sink and a microwave. Someone really likes ramen.",
 		"Items":[],
 		"Adjacent rooms":["garage","patio"],
-		"Characters":[]
+		"Characters":["Ravenette"]
 	}
 }

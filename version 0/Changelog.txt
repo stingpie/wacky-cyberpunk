@@ -3,3 +3,4 @@ VERSION 0
 - Added multiple dialog options
 - fixed bug where player couldn't enter garage
 - fixed bug where player could only select one dialog option ever. 
+- Added dialog trees, flag-based conversation system, and a tiny bit of story.

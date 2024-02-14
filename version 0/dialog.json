@@ -9,8 +9,36 @@
 				"Response options":[]
 			},
 			{
-				"Requirements":["ASKED RAVENETTE ABOUT ITS SARCASM"],
+				"Requirements":["[ITEM] HAS Ravenette's tablet"],
 				"Disqualifiers":[],
+				"Dialog":"Why did you bring Ravenette in here!? If I wanted to talk to it, I would've gone into the garage!",
+				"Response options":[
+					["Sorry! I just thought that Ravenette might be broken.", ["[TEMP] PLAYER SUGGESTS RAVENETTE IS BROKEN", "RAVENETTE DISOWNED"]],
+					["They just wanted to see you.", ["[TEMP] PLAYER SUGGESTS RAVENETTE IS LONELY", "PLAYER ACKNOWLEDGES RAVENETTE PERSONHOOD","RAVENETTE DISOWNED"]],
+					["Can I have it?",["PLAYER IS GIVEN RAVENETTE", "RAVENETTE DISOWNED"]]
+				]
+			},
+			{
+				"Requirements":["[TEMP] PLAYER SUGGESTS RAVENETTE IS BROKEN"],
+				"Disqualifiers":[],
+				"Dialog":"Of course it's broken. The first twenty minutes it seems so promising, but the longer you stay working on it, the more you realize how stupid it is. It's fucking pathetic.",
+				"Response options":[]
+			},
+			{
+				"Requirements":["[TEMP] PLAYER SUGGESTS RAVENETTE IS LONELY"],
+				"Disqualifers":[],
+				"Dialog":"I really don't care. Now get out. You've overstayed your welcome.",
+				"Response options":[]
+			},
+			{
+				"Requirements":["PLAYER IS GIVEN RAVENETTE"],
+				"Disqualifiers":[],
+				"Dialog":"Sure. I don't have a use for it anyways.",
+				"Response options":[]
+			},
+			{
+				"Requirements":["ASKED RAVENETTE ABOUT ITS SARCASM"],
+				"Disqualifiers":["[ITEM] HAS Ravenette's tablet"],
 				"Dialog": "Is Ravenette broken? I guess it has been a couple months since I've gone into the garage...",
 				"Response options":
 				[
@@ -22,7 +50,10 @@
 				"Requirements":["[TEMP] ASKED ABOUT RAVENETTE SARCASM"],
 				"Disqualifiers":[],
 				"Dialog":"I didn't program it like that.",
-				"Response options":[]
+				"Response options":[
+					["Maybe it's broken?",["[TEMP] PLAYER SUGGESTS RAVENETTE IS BROKEN"]],
+					["Bye",["[TEMP] SAID GOODBYE"]]
+				]
 			},
 			{
 				"Requirements":["[TEMP] ASKED INANE QUESTION"], 
@@ -50,7 +81,7 @@
 			},
 			{
 				"Requirements":["None"], 
-				"Disqualifiers":["ASKED RAVENETTE ABOUT ITS SARCASM"],
+				"Disqualifiers":["ASKED RAVENETTE ABOUT ITS SARCASM", "[ITEM] HAS Ravenette's tablet"],
 				"Dialog":"Huh? What do you want? Can't you see I'm in the middle of something here? Go talk to Ravenette in the garage. I can't be bothered to answer your inane questions.",
 				"Response options":
 				[
@@ -131,17 +162,17 @@
 			},
 			{
 				"Requirements":["RAVENETTE BETRAYED"],
-				"Disqualifiers":["APOLOGIZES TO RAVENETTE"],
+				"Disqualifiers":["APOLOGIZES TO RAVENETTE", "RAVENETTE RELENTS"],
 				"Dialog":"🮠◕ﺣ◕🮡",
 				"Response options":[
 					["No, I'm sorry.", ["APOLOGIZES TO RAVENETTE"]],
-					["...",[]]
+					["...",["RAVENETTE RELENTS"]]
 				]
 			},
 			{
 				"Requirements":["[ITEM] HAS Ravenette's tablet","PLAYER LIED TO RAVENETTE ABOUT NULLBIRD"],
 				"Disqualifiers":["RAVENETTE RELENTS"],
-				"Dialog":"--CAWW!!-- Really?! --CAW!! CAW!!-- I haven't spoken to him --CAWW!! CAWW!!-- since last Febuary! --CAW!! CAWW!! CAWW!!--",
+				"Dialog":"--CAWW!!-- Really?! --CAW!! CAW!!-- I haven't spoken to them --CAWW!! CAWW!!-- since last Febuary! --CAW!! CAWW!! CAWW!!--",
 				"Response options":[
 					["Ye.",["RAVENETTE RELENTS"]]
 				]
@@ -153,6 +184,93 @@
 				"Response options":[
 					["...",["RAVENETTE RELENTS"]]
 				]
+			}
+		],
+		"kitchen":[
+			{
+				"Requirements":["[ITEM] HAS Ravenette's tablet", "RAVENETTE RELENTS"],
+				"Disqualifiers":[],
+				"Dialog":"--CAW!!--Kitchens always creep me out.--CAWW!!--",
+				"Response options":[
+					["Huh?",["[TEMP] PLAYER CONFUSED"]],
+					["Huh...?",["[TEMP] PLAYER SLIGHTLY CONFUSED"]],
+					["Huh.",["[TEMP] PLAYER NOT INTERESTED"]]
+				]
+			},
+			{
+				"Requirements":["[TEMP] PLAYER CONFUSED"],
+				"Disqualifiers":[],
+				"Dialog":"Everthing in a--CAWW!!--kitchen can kill me. For you, the worst thing that can happen is you burn your hand. For me, the worst thing--CAW!!-- that can happen is I--CAWW!!--violently explode in the--CAW!!--microwave.",
+				"Response options":[]
+			},
+			{
+				"Requirements":["[TEMP] PLAYER SLIGHTLY CONFUSED"],
+				"Disqualifiers":[],
+				"Dialog":"I --CAW!!--wouldn't fare very well in the microwave, or sink, or refrigerator, or really anywhere.",
+				"Response options":[]
+			},
+			{
+				"Requirements":["[TEMP] PLAYER NOT INTERESTED", "RAVENETTE BETRAYED"],
+				"Disqualifiers":["APOLOGIZES TO RAVENETTE"],
+				"Dialog":"...",
+				"Response options":[]
+			},
+			{
+				"Requirements":["[TEMP] PLAYER NOT INTERESTED", "APOLOGIZES TO RAVENETTE"],
+				"Disqualifiers":[],
+				"Dialog":"...I don't want to be left here.",
+				"Response options":[]
+			}
+		
+		],
+		"patio":[
+			{
+				"Requirements":["[ITEM] HAS Ravenette's tablet", "PLAYER LIED TO RAVENETTE ABOUT NULLBIRD"],
+				"Disqualifiers":["RAVENETTE DISOWNED"],
+				"Dialog":"--CAW!! CAWW!! CAW!!-- They really want to see me! --CAWW!! CAW!!--",
+				"Response options":[]
+			},
+			{
+				"Requirements":["[ITEM] HAS Ravenette's tablet"],
+				"Disqualifiers":["PLAYER LIED TO RAVENETTE ABOUT NULLBIRD", "RAVENETTE DISOWNED"],
+				"Dialog":"--CAWW!!-- Is that Nullbird? Can I say hi? --CAWW!! CAWW!!--",
+				"Response options":[]
+			},
+			{
+				"Requirements":["[ITEM] HAS Ravenette's tablet", "RAVENETTE DISOWNED", "PLAYER LIED TO RAVENETTE ABOUT NULLBIRD", "PLAYER IS GIVEN RAVENETTE"],
+				"Disqualifiers":[],
+				"Dialog":"...stupid...",
+				"Response options":[]
+			},
+			{
+				"Requirements":["[ITEM] HAS Ravenette's tablet", "RAVENETTE DISOWNED", "PLAYER LIED TO RAVENETTE ABOUT NULLBIRD", "PLAYER ACKNOWLEDGES RAVENETTE PERSONHOOD"],
+				"Disqualifiers":[],
+				"Dialog":"Et tu, Brute?",
+				"Response options":[]
+			},
+			{
+				"Requirements":["[ITEM] HAS Ravenette's tablet", "RAVENETTE DISOWNED", "PLAYER LIED TO RAVENETTE ABOUT NULLBIRD"],
+				"Disqualifiers":["PLAYER ACKNOWLEDGES RAVENETTE PERSONHOOD", "PLAYER IS GIVEN RAVENETTE"],
+				"Dialog":"broken...",
+				"Response options":[]
+			},
+			{
+				"Requirements":["[ITEM] HAS Ravenette's tablet", "RAVENETTE DISOWNED"],
+				"Disqualifiers":["PLAYER ACKNOWLEDGES RAVENETTE PERSONHOOD", "PLAYER IS GIVEN RAVENETTE", "PLAYER LIED TO RAVENETTE ABOUT NULLBIRD"],
+				"Dialog":"I wish I was still in the garage.",
+				"Response options":[]
+			},
+			{
+				"Requirements":["[ITEM] HAS Ravenette's tablet", "RAVENETTE DISOWNED", "PLAYER ACKNOWLEDGES RAVENETTE PERSONHOOD"],
+				"Disqualifiers":["PLAYER IS GIVEN RAVENETTE", "PLAYER LIED TO RAVENETTE ABOUT NULLBIRD"],
+				"Dialog":"I don't know what to do now.",
+				"Response options":[]
+			},
+			{
+				"Requirements":["[ITEM] HAS Ravenette's tablet", "RAVENETTE DISOWNED", "PLAYER IS GIVEN RAVENETTE"],
+				"Disqualifiers":["PLAYER ACKNOWLEDGES RAVENETTE PERSONHOOD", "PLAYER LIED TO RAVENETTE ABOUT NULLBIRD"],
+				"Dialog":"AIs can't dream, so I hope I'm going crazy.",
+				"Response options":[]
 			}
 		]
 	}
