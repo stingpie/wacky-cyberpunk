@@ -26,7 +26,7 @@
 			},
 			{
 				"Requirements":["[TEMP] PLAYER SUGGESTS RAVENETTE IS LONELY"],
-				"Disqualifers":[],
+				"Disqualifiers":[],
 				"Dialog":"I really don't care. Now get out. You've overstayed your welcome.",
 				"Response options":[]
 			},
