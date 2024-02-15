@@ -149,7 +149,7 @@ def print_dialog(game_state, room_dialog):
 def talk_to(game_state, command): 
     character = " ".join(command.split()[1:]) ## get the name of the character the player wants to talk to.
 
-    if(character in game_state["rooms"][game_state["p_loc"]]["Characters"] or (character=="Ravenette" and "[ITEM] HAS Ravenette's tablet" in game_state["p_flags"])): ## if the character is in the room
+    if(character in game_state["rooms"][game_state["p_loc"]]["Characters"] or ( any(["[CHARACTER] "+character in game_state["items"][item]["Properties"] for item in game_state["p_inv"]]))): ## if the character is in the room
         room_dialog = game_state["dialog"][character][game_state["p_loc"]] ## all the dialog options for the character in this room.
         return print_dialog(game_state, room_dialog)
     else:

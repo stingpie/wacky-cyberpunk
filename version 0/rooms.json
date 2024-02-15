@@ -2,22 +2,45 @@
 	"garage":
 	{
 		"Description": "A dank garage, with a leaky pipe in the corner. It is filled to the brim with electronics. Is this really safe?",
+		"Requirements":["None"],
 		"Items":["Ravenette's tablet", "loose wires", "electronic rubber chicken"],
 		"Adjacent rooms":["kitchen"],
-		"Characters":["Ravenette"]
+		"Characters":["Ravenette"],
+		"Properies":[]
 	},
 	"patio":
 	{
 		"Description":"A patio overlooking a city of glittering lights. There's a small workbench setup, covered in a thin layer of circuit boards and faux feathers.",
+		"Requirements":["None"],
 		"Items":["faux feathers"],
 		"Adjacent rooms":["kitchen"],
-		"Characters":["Nullbird"]
+		"Characters":["Nullbird"],
+		"Properties":[]
 	},
 	"kitchen":
 	{
 		"Description": "A kitchen consisting entirely of a sink and a microwave. Someone really likes ramen.",
+		"Requirements":["None"],
 		"Items":[],
-		"Adjacent rooms":["garage","patio"],
-		"Characters":[]
+		"Adjacent rooms":["garage","patio","alleyway"],
+		"Characters":[],
+		"Properties":[]
+	},
+	"alleyway":
+	{
+		"Description":"A dark alleyway that leads from Nullbird's home. You are likely to be eaten by a grue.",
+		"Requirements":["None"],
+		"Items":[],
+		"Adjacent rooms":["street", "kitchen"],
+		"Characters":["Grue"],
+		"Properties":["[GIVE]chicken robot>Grue"]
+	},
+	"street":
+	{
+		"Description":"A street that would probably be bustling with cars if it weren't for the watermelon-sized potholes.",
+		"Requirements":["[GIVE]chicken robot>Grue"],
+		"Adjacent rooms":["alleyway"],
+		"Characters":[],
+		"Properties":[]
 	}
 }

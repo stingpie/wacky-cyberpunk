@@ -8,3 +8,5 @@ VERSION 0
 - hacked together a system to take ravenette with you
 - Added inv command
 - Added help command
+- Unhacked system to take Ravenette with you
+- loads of half functioning stuff in an attempt to increase player interaction with the world

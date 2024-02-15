@@ -26,5 +26,9 @@
 	"chicken robot":{
 		"Description":"Now that it's feathered and walking around... it still wouldn't fool anyone. What could you do with it now?",
 		"Properties":[]
+	},
+	"Philosocube":{
+		"Description":"A small cube with a speaker on it that holds a strange AI.",
+		"Properties":["[CHARACTER] Lithocles"]
 	}
 }	

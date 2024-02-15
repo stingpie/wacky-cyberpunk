@@ -273,5 +273,16 @@
 				"Response options":[]
 			}
 		]
+	},
+	"Lithocles":
+	{
+		"Anywhere":[
+			{
+				"Requirements":["None"],
+				"Disqualifiers":["LITHOCLES KILLED"],
+				"Dialog":"Let's say, for the sake of argument, that exclusively functioning through the recall of previous states of being precludes the experience of qualia. This is common sense, since regardless of the pattern you read pages in a book, the book does not develop conciousness or experience anything. Now, what if instead of rote recitation of memory, there was some algorithm that stitched together multiple memories into a coherent picture that was related to the current state of being? Common sense would dictate that this new intelligent system would still not be concious, since it is still simply recalling previous states, though it may be interpolating between them. Now, let us shift our attention to human development, which is certainly more complicated. Many would argue, such as those parial to the Freudian interpretation, that the human brain is constructed and mainly dictated by childhood experiences. In this view, an adult might fear dogs due to a painful early childhood memory of a dog. Of course, the adult isn't directly recalling the experience, but rather, the experience create internal 'circuitry' that generates a fear response to dogs. This has been demonstrated by Pavlov in his theory of conditioning. Though this model of the brain is simple, it nonetheless demonstrates a problem with our axioms. The adult's response to the dog is created by an interpolation of the fearful childhood experience, and the current input of the dog. In essence, we have reduced the human mind to a level of non-conciousness which we have defined previously.",
+				"Response options":[]
+			}
+		]
 	}
 }
