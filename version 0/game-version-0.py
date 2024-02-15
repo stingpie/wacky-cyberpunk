@@ -10,7 +10,10 @@ actions ={
             "use" : hf.use_item,
             "talk" : hf.talk_to,
             "speak" :hf.talk_to,
-            "quit"  :exit
+            "quit"  :exit,
+            "combine":hf.combine,
+            "inv": hf.check_inv,
+            "help": hf.help
             }
 
 

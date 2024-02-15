@@ -37,7 +37,7 @@ def examine(game_state, command): ## Examine a room, character, or an item.
     
     
 def describe_item(game_state, item_to_examine):
-    print("This is a "+item_to_examine+". "+ game_state["items"][item_to_examine])
+    print("This is a "+item_to_examine+". "+ game_state["items"][item_to_examine]["Description"])
 
 
 def describe_room(game_state, room_to_examine):
@@ -148,13 +148,36 @@ def print_dialog(game_state, room_dialog):
 
 def talk_to(game_state, command): 
     character = " ".join(command.split()[1:]) ## get the name of the character the player wants to talk to.
-    if(character in game_state["rooms"][game_state["p_loc"]]["Characters"]): ## if the character is in the room
 
+    if(character in game_state["rooms"][game_state["p_loc"]]["Characters"] or (character=="Ravenette" and "[ITEM] HAS Ravenette's tablet" in game_state["p_flags"])): ## if the character is in the room
         room_dialog = game_state["dialog"][character][game_state["p_loc"]] ## all the dialog options for the character in this room.
         return print_dialog(game_state, room_dialog)
-        
-                
+    else:
+        print(character + " isn't in here!")
+             
+    return game_state
+            
+            
 
-            
-            
-            
+
+
+def combine(game_state, command):
+    first_item = command[command.find("combine")+7:command.find("with")].strip()
+    second_item = command[command.find("with")+5:].strip()
+    
+    if(first_item in game_state["p_inv"] and second_item in game_state["p_inv"]):
+        for p in game_state["items"][first_item]["Properties"]:
+            if p.startswith("[COMBINE]") and second_item in p:
+                game_state["p_inv"].remove(first_item)
+                game_state["p_inv"].remove(second_item)
+                game_state["p_inv"] += [p[p.find(">")+1:]]
+                break
+    return game_state
+    
+def check_inv(game_state, command):
+    print("You have "+", ".join( str(item) for item in game_state["p_inv"]))
+    return game_state
+    
+def help(game_state, command):
+    print("You can talk [character], take [item], go [room], look [room], look [item], look [character], combine [item1] with [item2], inv")
+    return game_state

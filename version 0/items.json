@@ -1,6 +1,30 @@
 {
-	"Ravenette's tablet":"This tablet has the Ravenette AI. It seems a bit too sarcastic to be very useful, though.",
-	"faux feathers":"These came from Nullbird's workbench. You never really understood their 'unique' sense of fashion.",
-	"loose wires":"You used to make little wire sculptures. You stopped to find more important pursuits. You still haven't found one yet.",
-	"electronic rubber chicken":"Once just a humorous prop, the rubber chicken has since become a cornerstone of modern technology."
+	"Ravenette's tablet":{
+		"Description":"This tablet has the Ravenette AI. It seems a bit too sarcastic to be very useful, though.",
+		"Properties":["[CHARACTER] Ravenette"]
+	},
+	"faux feathers":{
+		"Description":"These came from Nullbird's workbench. You never really understood their 'unique' sense of fashion.",
+		"Properties":["[COMBINE]electronic rubber chicken>feathered rubber chicken"]
+	},
+	"loose wires":{
+		"Description":"You used to make little wire sculptures. You stopped to find more important pursuits. You still haven't found one yet.",
+		"Properties":["[COMBINE]feathered rubber chicken>chicken robot", "[COMBINE]electronic rubber chicken>repaired rubber chicken"]
+	},
+	"electronic rubber chicken":{
+		"Description":"Once just a humorous prop, the rubber chicken has since become a cornerstone of modern technology. This one seems broken.",
+		"Properties":["[COMBINE]faux feathers>feathered rubber chicken", "[COMBINE]loose wires>repaired rubber chicken"]
+	},
+	"repaired rubber chicken":{
+		"Description":"This chicken can now cluck and walk around, but it wouldn't fool anyone.",
+		"Properties":["[COMBINE]faux feathers>chicken robot"]
+	},
+	"feathered rubber chicken":{
+		"Description":"It's still broken, so it wouldn't fool anyone.",
+		"Properties":["[COMBINE]loose wires>chicken robot"]
+	},
+	"chicken robot":{
+		"Description":"Now that it's feathered and walking around... it still wouldn't fool anyone. What could you do with it now?",
+		"Properties":[]
+	}
 }	

@@ -4,3 +4,7 @@ VERSION 0
 - fixed bug where player couldn't enter garage
 - fixed bug where player could only select one dialog option ever. 
 - Added dialog trees, flag-based conversation system, and a tiny bit of story.
+- Added ability to combine items
+- hacked together a system to take ravenette with you
+- Added inv command
+- Added help command
