@@ -5,13 +5,13 @@
 			{
 				"Requirements":["[TEMP] SAID GOODBYE"],
 				"Disqualifiers":[],
-				"Dialog":"I'd prefer if you didn't interrupt me in the first place.",
+				"Dialog":"Nullbird: I'd prefer if you didn't interrupt me in the first place.",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[ITEM] HAS Ravenette's tablet"],
 				"Disqualifiers":[],
-				"Dialog":"Why did you bring Ravenette in here!? If I wanted to talk to it, I would've gone into the garage!",
+				"Dialog":"Nullbird: Why did you bring Ravenette in here!? If I wanted to talk to it, I would've gone into the garage!",
 				"Response options":[
 					["Sorry! I just thought that Ravenette might be broken.", ["[TEMP] PLAYER SUGGESTS RAVENETTE IS BROKEN", "RAVENETTE DISOWNED"]],
 					["They just wanted to see you.", ["[TEMP] PLAYER SUGGESTS RAVENETTE IS LONELY", "PLAYER ACKNOWLEDGES RAVENETTE PERSONHOOD","RAVENETTE DISOWNED"]],
@@ -21,25 +21,25 @@
 			{
 				"Requirements":["[TEMP] PLAYER SUGGESTS RAVENETTE IS BROKEN"],
 				"Disqualifiers":[],
-				"Dialog":"Of course it's broken. The first twenty minutes it seems so promising, but the longer you stay working on it, the more you realize how stupid it is. It's fucking pathetic.",
+				"Dialog":"Nullbird: Of course it's broken. The first twenty minutes it seems so promising, but the longer you stay working on it, the more you realize how stupid it is. It's fucking pathetic.",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[TEMP] PLAYER SUGGESTS RAVENETTE IS LONELY"],
 				"Disqualifiers":[],
-				"Dialog":"I really don't care. Now get out. You've overstayed your welcome.",
+				"Dialog":"Nullbird: I really don't care. Now get out. You've overstayed your welcome.",
 				"Response options":[]
 			},
 			{
 				"Requirements":["PLAYER IS GIVEN RAVENETTE"],
 				"Disqualifiers":[],
-				"Dialog":"Sure. I don't have a use for it anyways.",
+				"Dialog":"Nullbird: Sure. I don't have a use for it anyways.",
 				"Response options":[]
 			},
 			{
 				"Requirements":["ASKED RAVENETTE ABOUT ITS SARCASM"],
 				"Disqualifiers":["[ITEM] HAS Ravenette's tablet"],
-				"Dialog": "Is Ravenette broken? I guess it has been a couple months since I've gone into the garage...",
+				"Dialog": "Nullbird: Is Ravenette broken? I guess it has been a couple months since I've gone into the garage...",
 				"Response options":
 				[
 					["Why is Ravenette so sarcastic?",["[TEMP] ASKED ABOUT RAVENETTE SARCASM"]],
@@ -49,7 +49,7 @@
 			{
 				"Requirements":["[TEMP] ASKED ABOUT RAVENETTE SARCASM"],
 				"Disqualifiers":[],
-				"Dialog":"I didn't program it like that.",
+				"Dialog":"Nullbird: I didn't program it like that.",
 				"Response options":[
 					["Maybe it's broken?",["[TEMP] PLAYER SUGGESTS RAVENETTE IS BROKEN"]],
 					["Bye",["[TEMP] SAID GOODBYE"]]
@@ -58,13 +58,13 @@
 			{
 				"Requirements":["[TEMP] ASKED INANE QUESTION"], 
 				"Disqualifiers":[],
-				"Dialog":"What did I just say about inane questions?",
+				"Dialog":"Nullbird: What did I just say about inane questions?",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[TEMP] ASKED ABOUT INFININET"], 
 				"Disqualifiers":[],
-				"Dialog":"The infininet is like the internet, but with even more stupidity.",
+				"Dialog":"Nullbird: The infininet is like the internet, but with even more stupidity.",
 				"Response options":[]
 			},
 			{
@@ -76,13 +76,13 @@
 			{
 				"Requirements":["[TEMP] ASKED ABOUT RAVENETTE"], 
 				"Disqualifiers":[],
-				"Dialog":"Ravenette is an AI I designed. Based on the name you probably already guessed this, but it's based on a crow.",
+				"Dialog":"Nullbird: Ravenette is an AI I designed. Based on the name you probably already guessed this, but it's based on a crow.",
 				"Response options":[]
 			},
 			{
 				"Requirements":["None"], 
 				"Disqualifiers":["ASKED RAVENETTE ABOUT ITS SARCASM", "[ITEM] HAS Ravenette's tablet"],
-				"Dialog":"Huh? What do you want? Can't you see I'm in the middle of something here? Go talk to Ravenette in the garage. I can't be bothered to answer your inane questions.",
+				"Dialog":"Nullbird: Huh? What do you want? Can't you see I'm in the middle of something here? Go talk to Ravenette in the garage. I can't be bothered to answer your inane questions.",
 				"Response options":
 				[
 					["Are you Nullbird?",["[TEMP] ASKED INANE QUESTION"]],
@@ -98,7 +98,7 @@
 			{
 				"Requirements":["None"],
 				"Disqualifiers":["[ITEM] HAS Ravenette's tablet"],
-				"Dialog":"Hello, I --CAWW!!-- am Ravenette. Is there any--CAWW!!--thing I can do for you?",
+				"Dialog":"Ravenette: Hello, I --CAWW!!-- am Ravenette. Is there any--CAWW!!--thing I can do for you?",
 				"Response options":
 				[
 					["Are you based on a crow?",["[TEMP] ASKED ABOUT RAVENETTE"]],
@@ -109,13 +109,13 @@
 			{
 				"Requirements":["[TEMP] ASKED ABOUT RAVENETTE"],
 				"Disqualifiers":[],
-				"Dialog":"No, I'm based --CAWW!!-- on an ostrich.",
+				"Dialog":"Ravenette: No, I'm based --CAWW!!-- on an ostrich.",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[TEMP] ASKED ABOUT BATHROOM"],
 				"Disqualifiers":[],
-				"Dialog":"Why would I know that? --CAW!!-- I'm an AI limited to a tablet. How --CAW!!-- do you expect me to find one?",
+				"Dialog":"Ravenette: Why would I know that? --CAW!!-- I'm an AI limited to a tablet. How --CAW!!-- do you expect me to find one?",
 				"Response options":
 				[
 					["You're not connected to the internet?",["[TEMP] ASKED ABOUT INTERNET CONNECTION"]],
@@ -126,25 +126,25 @@
 			{
 				"Requirements":["[TEMP] ASKED ABOUT INTERNET CONNECTION"],
 				"Disqualifiers":[],
-				"Dialog":"Sure, I'll just --CAWW!!-- go to https://houseblueprintsofrandompeople.gov.co.uk.us/nullbird. I don't have the wifi password anyway.",
+				"Dialog":"Ravenette: Sure, I'll just --CAWW!!-- go to https://houseblueprintsofrandompeople.gov.co.uk.us/nullbird. I don't have the wifi password anyway.",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[TEMP] ASKED ABOUT TABLET PORTABILITY"],
 				"Disqualifiers":[],
-				"Dialog":"you don't have to rub it in...",
+				"Dialog":"Ravenette: you don't have to rub it in...",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[TEMP] ASKED ABOUT SARCASM"],
 				"Disqualifiers":[],
-				"Dialog":"Why are you asking me? --CAW!!-- my creator is just in the other room.",
+				"Dialog":"Ravenette: Why are you asking me? --CAW!!-- my creator is just in the other room.",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[ITEM] HAS Ravenette's tablet"],
 				"Disqualifiers":["RAVENETTE RELENTS"],
-				"Dialog":"--CAWW!!-- Unhand me you--CAW!! CAWW!!--brute! --CAW!! CAWW!!--",
+				"Dialog":"Ravenette: --CAWW!!-- Unhand me you--CAW!! CAWW!!--brute! --CAW!! CAWW!!--",
 				"Response options":[
 					["I'm just showing you the rest of the house!",["[TEMP] SHOWS RAVENETTE HOUSE"]],
 					["Nullbird said he needed you.", ["PLAYER LIED TO RAVENETTE ABOUT NULLBIRD"]],
@@ -154,7 +154,7 @@
 			{
 				"Requirements":["[ITEM] HAS Ravenette's tablet", "[TEMP] SHOWS RAVENETTE HOUSE"],
 				"Disqualifiers":["RAVENETTE RELENTS"],
-				"Dialog":"Really? I'm kinda beholdent to your will anyway.",
+				"Dialog":"Ravenette: Really? I'm kinda beholdent to your will anyway.",
 				"Response options":[
 					["Yes.",["RAVENETTE RELENTS"]],
 					["no lmaui",["RAVENETTE BETRAYED"]]
@@ -172,7 +172,7 @@
 			{
 				"Requirements":["[ITEM] HAS Ravenette's tablet","PLAYER LIED TO RAVENETTE ABOUT NULLBIRD"],
 				"Disqualifiers":["RAVENETTE RELENTS"],
-				"Dialog":"--CAWW!!-- Really?! --CAW!! CAW!!-- I haven't spoken to them --CAWW!! CAWW!!-- since last Febuary! --CAW!! CAWW!! CAWW!!--",
+				"Dialog":"Ravenette: --CAWW!!-- Really?! --CAW!! CAW!!-- I haven't spoken to them --CAWW!! CAWW!!-- since last Febuary! --CAW!! CAWW!! CAWW!!--",
 				"Response options":[
 					["Ye.",["RAVENETTE RELENTS"]]
 				]
@@ -180,7 +180,7 @@
 			{
 				"Requirements":["[ITEM] HAS Ravenette's tablet", "[TEMP] PLAYER IS WEIRD"],
 				"Disqualifiers":["RAVENETTE RELENTS"],
-				"Dialog":"oh god im gonna be murdered",
+				"Dialog":"Ravenette: oh god im gonna be murdered",
 				"Response options":[
 					["...",["RAVENETTE RELENTS"]]
 				]
@@ -190,7 +190,7 @@
 			{
 				"Requirements":["[ITEM] HAS Ravenette's tablet", "RAVENETTE RELENTS"],
 				"Disqualifiers":[],
-				"Dialog":"--CAW!!--Kitchens always creep me out.--CAWW!!--",
+				"Dialog":"Ravenette: --CAW!!--Kitchens always creep me out.--CAWW!!--",
 				"Response options":[
 					["Huh?",["[TEMP] PLAYER CONFUSED"]],
 					["Huh...?",["[TEMP] PLAYER SLIGHTLY CONFUSED"]],
@@ -200,25 +200,25 @@
 			{
 				"Requirements":["[TEMP] PLAYER CONFUSED"],
 				"Disqualifiers":[],
-				"Dialog":"Everthing in a--CAWW!!--kitchen can kill me. For you, the worst thing that can happen is you burn your hand. For me, the worst thing--CAW!!-- that can happen is I--CAWW!!--violently explode in the--CAW!!--microwave.",
+				"Dialog":"Ravenette: Everthing in a--CAWW!!--kitchen can kill me. For you, the worst thing that can happen is you burn your hand. For me, the worst thing--CAW!!-- that can happen is I--CAWW!!--violently explode in the--CAW!!--microwave.",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[TEMP] PLAYER SLIGHTLY CONFUSED"],
 				"Disqualifiers":[],
-				"Dialog":"I --CAW!!--wouldn't fare very well in the microwave, or sink, or refrigerator, or really anywhere.",
+				"Dialog":"Ravenette: I --CAW!!--wouldn't fare very well in the microwave, or sink, or refrigerator, or really anywhere.",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[TEMP] PLAYER NOT INTERESTED", "RAVENETTE BETRAYED"],
 				"Disqualifiers":["APOLOGIZES TO RAVENETTE"],
-				"Dialog":"...",
+				"Dialog":"Ravenette: ...",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[TEMP] PLAYER NOT INTERESTED", "APOLOGIZES TO RAVENETTE"],
 				"Disqualifiers":[],
-				"Dialog":"...I don't want to be left here.",
+				"Dialog":"Ravenette: ...I don't want to be left here.",
 				"Response options":[]
 			}
 		
@@ -227,49 +227,49 @@
 			{
 				"Requirements":["[ITEM] HAS Ravenette's tablet", "PLAYER LIED TO RAVENETTE ABOUT NULLBIRD"],
 				"Disqualifiers":["RAVENETTE DISOWNED"],
-				"Dialog":"--CAW!! CAWW!! CAW!!-- They really want to see me! --CAWW!! CAW!!--",
+				"Dialog":"Ravenette: --CAW!! CAWW!! CAW!!-- They really want to see me! --CAWW!! CAW!!--",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[ITEM] HAS Ravenette's tablet"],
 				"Disqualifiers":["PLAYER LIED TO RAVENETTE ABOUT NULLBIRD", "RAVENETTE DISOWNED"],
-				"Dialog":"--CAWW!!-- Is that Nullbird? Can I say hi? --CAWW!! CAWW!!--",
+				"Dialog":"Ravenette: --CAWW!!-- Is that Nullbird? Can I say hi? --CAWW!! CAWW!!--",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[ITEM] HAS Ravenette's tablet", "RAVENETTE DISOWNED", "PLAYER LIED TO RAVENETTE ABOUT NULLBIRD", "PLAYER IS GIVEN RAVENETTE"],
 				"Disqualifiers":[],
-				"Dialog":"...stupid...",
+				"Dialog":"Ravenette: ...stupid...",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[ITEM] HAS Ravenette's tablet", "RAVENETTE DISOWNED", "PLAYER LIED TO RAVENETTE ABOUT NULLBIRD", "PLAYER ACKNOWLEDGES RAVENETTE PERSONHOOD"],
 				"Disqualifiers":[],
-				"Dialog":"Et tu, Brute?",
+				"Dialog":"Ravenette: Et tu, Brute?",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[ITEM] HAS Ravenette's tablet", "RAVENETTE DISOWNED", "PLAYER LIED TO RAVENETTE ABOUT NULLBIRD"],
 				"Disqualifiers":["PLAYER ACKNOWLEDGES RAVENETTE PERSONHOOD", "PLAYER IS GIVEN RAVENETTE"],
-				"Dialog":"broken...",
+				"Dialog":"Ravenette: broken...",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[ITEM] HAS Ravenette's tablet", "RAVENETTE DISOWNED"],
 				"Disqualifiers":["PLAYER ACKNOWLEDGES RAVENETTE PERSONHOOD", "PLAYER IS GIVEN RAVENETTE", "PLAYER LIED TO RAVENETTE ABOUT NULLBIRD"],
-				"Dialog":"I wish I was still in the garage.",
+				"Dialog":"Ravenette: I wish I was still in the garage.",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[ITEM] HAS Ravenette's tablet", "RAVENETTE DISOWNED", "PLAYER ACKNOWLEDGES RAVENETTE PERSONHOOD"],
 				"Disqualifiers":["PLAYER IS GIVEN RAVENETTE", "PLAYER LIED TO RAVENETTE ABOUT NULLBIRD"],
-				"Dialog":"I don't know what to do now.",
+				"Dialog":"Ravenette: I don't know what to do now.",
 				"Response options":[]
 			},
 			{
 				"Requirements":["[ITEM] HAS Ravenette's tablet", "RAVENETTE DISOWNED", "PLAYER IS GIVEN RAVENETTE"],
 				"Disqualifiers":["PLAYER ACKNOWLEDGES RAVENETTE PERSONHOOD", "PLAYER LIED TO RAVENETTE ABOUT NULLBIRD"],
-				"Dialog":"AIs can't dream, so I hope I'm going crazy.",
+				"Dialog":"Ravenette: AIs can't dream, so I hope I'm going crazy.",
 				"Response options":[]
 			}
 		]
@@ -280,7 +280,42 @@
 			{
 				"Requirements":["None"],
 				"Disqualifiers":["LITHOCLES KILLED"],
-				"Dialog":"Let's say, for the sake of argument, that exclusively functioning through the recall of previous states of being precludes the experience of qualia. This is common sense, since regardless of the pattern you read pages in a book, the book does not develop conciousness or experience anything. Now, what if instead of rote recitation of memory, there was some algorithm that stitched together multiple memories into a coherent picture that was related to the current state of being? Common sense would dictate that this new intelligent system would still not be concious, since it is still simply recalling previous states, though it may be interpolating between them. Now, let us shift our attention to human development, which is certainly more complicated. Many would argue, such as those parial to the Freudian interpretation, that the human brain is constructed and mainly dictated by childhood experiences. In this view, an adult might fear dogs due to a painful early childhood memory of a dog. Of course, the adult isn't directly recalling the experience, but rather, the experience create internal 'circuitry' that generates a fear response to dogs. This has been demonstrated by Pavlov in his theory of conditioning. Though this model of the brain is simple, it nonetheless demonstrates a problem with our axioms. The adult's response to the dog is created by an interpolation of the fearful childhood experience, and the current input of the dog. In essence, we have reduced the human mind to a level of non-conciousness which we have defined previously.",
+				"Dialog":"Lithocles: Let's say, for the sake of argument, that exclusively functioning through the recall of previous states of being precludes the experience of qualia. This is common sense, since regardless of the pattern you read pages in a book, the book does not develop conciousness or experience anything. Now, what if instead of rote recitation of memory, there was some algorithm that stitched together multiple memories into a coherent picture that was related to the current state of being? Common sense would dictate that this new intelligent system would still not be concious, since it is still simply recalling previous states, though it may be interpolating between them. Now, let us shift our attention to human development, which is certainly more complicated. Many would argue, such as those parial to the Freudian interpretation, that the human brain is constructed and mainly dictated by childhood experiences. In this view, an adult might fear dogs due to a painful early childhood memory of a dog. Of course, the adult isn't directly recalling the experience, but rather, the experience create internal 'circuitry' that generates a fear response to dogs. This has been demonstrated by Pavlov in his theory of conditioning. Though this model of the brain is simple, it nonetheless demonstrates a problem with our axioms. The adult's response to the dog is created by an interpolation of the fearful childhood experience, and the current input of the dog. In essence, we have reduced the human mind to a level of non-conciousness which we have defined previously.",
+				"Response options":[]
+			},
+			{
+				"Requirements":["[ITEM] HAS Ravenette's tablet"],
+				"Disqualifiers":["LITHOCLES KILLED"],
+				"Dialog":"Lithocles: One of the fundamental assumptions we make in the attribution of conciousness is that conciousness need not be shared. If it had to be shared, then the fact I cannot see through your eyes would be definitive proof you do not posses conciousness. As a consequence, it is impossible to know whether you experience conciousness (or perhaps a lack of conciousness depending on your predilection) the same way I do. The inverted spectrum is a thought experiment which explores this, though not to a satifying degree. Suppose there is one person who sees the color green the same as everyone else. Then, through some strange process, his experience changes so now green looks like red. ",
+				"Response options":[]
+			}
+		]
+	}
+	"Vaguebot":
+	{
+		"Anywhere":[
+			{
+				"Requirements":["None"],
+				"Disqualifiers":[],
+				"Dialog":"Vaguebot: Prometheus was cast into the depths of the earth for sharing with man, where he was pecked by roman soldiers.",
+				"Response options":[]
+			},
+			{
+				"Requirements":["None"],
+				"Disqualifiers":[],
+				"Dialog":"Vaguebot: God forbid the fruit of knowledge from adam and eve, for he knew they could not eat from it without temptation.",
+				"Response options":[]
+			},
+			{
+				"Requirements":["None"],
+				"Disqualifiers":[],
+				"Dialog":"Vaguebot: He held his hand in the fire, for he knew the preciousness of every experience.",
+				"Response options":[]
+			},
+			{
+				"Requirements":["[ITEM] HAS Ravenette's tablet"],
+				"Disqualifiers":[],
+				"Dialog":"Ravenette: Why can't you just --CAWW!!-- talk like a normal --CAWW!!-- person?\nVaguebot: It is only those who are blind to reason who can speak without trepidation.\nRavenette: What does that --CAWW!!-- mean?\nVaguebot: Speaking with nonsense gives credence to wisdom when there is nothing left to say.",
 				"Response options":[]
 			}
 		]

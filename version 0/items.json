@@ -29,6 +29,6 @@
 	},
 	"Philosocube":{
 		"Description":"A small cube with a speaker on it that holds a strange AI.",
-		"Properties":["[CHARACTER] Lithocles"]
+		"Properties":["[CHARACTER] Lithocles", "INCESSANT"]
 	}
 }	
